@@ -1,0 +1,44 @@
+<!--Student: Bruna Donatoni-->
+<!--Student ID: 301199383-->
+<!--Date: Oct 05, 2022-->
+
+<!DOCTYPE html>
+<html>
+
+  <!-- Head of the page -->
+  <%- include('partials/head.ejs') %>
+
+  <body>
+    <div class="headstyle">
+      <br>
+      <!-- Header -->
+      <%- include('partials/header.ejs') %>
+      <!-- Navigation Bar -->
+      <%- include('partials/navigationbar.ejs') %>
+    </div>
+
+    <% if(messages.length > 0) {%>
+      <div class="alert">
+          <%= messages %>
+      </div>
+    <% } %>
+
+    <div class="container" style="width:200px" >
+      <br>      <br>      <br>
+      <form action="/login" method="post" id="loginForm">
+        <label for="username">User Name</label>
+        <input type="text" id="username" name="username" placeholder="Your user name..">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Your password..">
+
+        <input type="submit" value="Login">
+      </form>
+    </div>
+
+
+    <!-- Footer of the page -->
+    <%- include('partials/footer.ejs') %>
+  </body>
+
+</html>

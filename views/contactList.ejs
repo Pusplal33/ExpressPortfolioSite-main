@@ -1,0 +1,63 @@
+<!--Student: Bruna Donatoni-->
+<!--Student ID: 301199383-->
+<!--Date: Oct 05, 2022-->
+
+<!DOCTYPE html>
+<html>
+
+  <!-- Head of the page -->
+  <%- include('partials/head.ejs') %>
+
+  <body>
+    <div class="headstyle">
+      <br>
+      <!-- Header -->
+      <%- include('partials/header.ejs') %>
+      <!-- Navigation Bar -->
+      <%- include('partials/navigationbar.ejs') %>
+    </div>
+
+    <div  >
+      <br>      <br>      <br>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+            <tr>
+              <th class="text-center">Name</th>
+              <th class="text-center">Email</th>
+              <th class="text-center">Number</th>
+              <th class="text-center"></th>
+              <th class="text-center"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Template Row -->
+            <% for (let count = 0; count < contacts.length; count++) { %>
+            <tr>
+              <td><%= contacts[count].name %></td>
+              <td class="text-center"><%= contacts[count].email %></td>
+              <td class="text-center"><%= contacts[count].number %></td>
+
+              <td class="text-center">
+                <a href="/contact/<%= contacts[count].id %>" class="btnEdit" > edit</a>
+              </td>
+
+              <td class="text-center">
+                <a href="/contact/delete/<%= contacts[count].id %>" class="btnDelete" > delete</a>
+              </td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+
+
+
+    </div>
+
+
+    <!-- Footer of the page -->
+    <%- include('partials/footer.ejs') %>
+  </body>
+
+</html>

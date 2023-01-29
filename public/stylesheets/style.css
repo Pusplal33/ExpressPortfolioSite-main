@@ -1,0 +1,161 @@
+/*
+Student: Bruna Donatoni
+Student ID: 301199383
+Date: Oct 05, 2022
+*/
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;  
+}
+
+a {
+  color: #fafcfc;
+}
+
+.headstyle {
+  color: aliceblue;
+  background-color: #232F3E;
+}
+
+footer {
+  color: aliceblue;
+  background-color: #232F3E;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+.webname{
+  text-align: center;
+}
+
+.textalign{
+  margin-left: 8%;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+.contactInfo {
+  color: #232F3E;
+}
+
+.projectimg {
+  width:100px;
+  height:100px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Stops the float property from affecting content after the columns */
+.columns:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input[type=text], select, textarea, password {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=number] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=password]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.btnEdit {
+  background-color: #ddca20;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btnDelete {
+  background-color: #aa0404ce;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+th {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+td {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.table {
+  border-collapse: collapse !important;
+}
+
+.table-bordered th {
+  border: 1px solid #ddd !important;
+  color: aliceblue;
+  background-color: #232F3E !important;
+}
+.table-bordered td {
+  border: 1px solid #ddd !important;
+  background-color: #fff !important;
+}
+
+.alert {
+  background-color: #aa0404ce;
+  color: white;
+}

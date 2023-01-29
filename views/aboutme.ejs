@@ -1,0 +1,43 @@
+<!--Student: Bruna Donatoni-->
+<!--Student ID: 301199383-->
+<!--Date: Oct 05, 2022-->
+
+<!DOCTYPE html>
+<html>
+
+  <!-- Head of the page -->
+  <%- include('partials/head.ejs') %>
+
+  <body>
+        
+    <div class="headstyle">
+      <br>
+      <!-- Header -->
+      <%- include('partials/header.ejs') %>
+      <!-- Navigation Bar -->
+      <%- include('partials/navigationbar.ejs') %>
+      <!-- Footer of the page -->
+      <%- include('partials/footer.ejs') %>
+    </div>
+
+    <h1 class="webname"><%= title %></h1>
+
+    <div class="columns">
+      <div class="column">
+        <img src="images/Bruna.jpg" alt="About Me">
+      </div>
+      <div class="column">
+        <h3><%= name %></h3>
+        <h3><%= description %></h3>
+        <p>
+          <a class="contactInfo" href="<%= linkedin %>" target="_blank"><i class="fa-brands fa-github fa-xl socialMedia"></i></a>
+          <a class="contactInfo" href="<%= github %>" target="_blank"><i class="fa-brands fa-linkedin fa-xl socialMedia"></i></a>
+        </p>
+        <iframe src="files/CV_Bruna_Donatoni.pdf" width="100%" height="500px">
+      </div>
+    </div>
+
+  </body>
+
+</html>
+

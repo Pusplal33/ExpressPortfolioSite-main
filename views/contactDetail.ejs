@@ -1,0 +1,46 @@
+<!--Student: Bruna Donatoni-->
+<!--Student ID: 301199383-->
+<!--Date: Oct 05, 2022-->
+
+<!DOCTYPE html>
+<html>
+
+  <!-- Head of the page -->
+  <%- include('partials/head.ejs') %>
+
+  <body>
+    <div class="headstyle">
+      <br>
+      <!-- Header -->
+      <%- include('partials/header.ejs') %>
+      <!-- Navigation Bar -->
+      <%- include('partials/navigationbar.ejs') %>
+    </div>
+
+    <div class="container" >
+      <br>      <br>      <br>
+      <form action="/contact/<%= contact.id %>" method="post" id="contactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name.." value="<%= contact.name %>">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Your email.." value="<%= contact.email %>">
+
+        <label for="number">Number</label>
+        <input type="number" id="number" name="number" placeholder="Your contact number.." value="<%= contact.number %>">
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" value="<%= contact.subject %>"><%= contact.subject %></textarea>
+
+        <input type="submit" value="Submit">  
+        <a href="/contact/delete/<%= contact.id %>" class="btnDelete" > delete</a>
+        <a href="/contact/list" class="btnEdit"  > cancel</a>
+      </form>
+    </div>
+
+
+    <!-- Footer of the page -->
+    <%- include('partials/footer.ejs') %>
+  </body>
+
+</html>

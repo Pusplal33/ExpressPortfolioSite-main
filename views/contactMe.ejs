@@ -1,0 +1,64 @@
+<!--Student: Bruna Donatoni-->
+<!--Student ID: 301199383-->
+<!--Date: Oct 05, 2022-->
+
+<!DOCTYPE html>
+<html>
+
+  <!-- Head of the page -->
+  <%- include('partials/head.ejs') %>
+
+  <body>
+    <div class="headstyle">
+      <br>
+      <!-- Header -->
+      <%- include('partials/header.ejs') %>
+      <!-- Navigation Bar -->
+      <%- include('partials/navigationbar.ejs') %>
+    </div>
+
+    <div class="container" >
+      <br>      <br>      <br>
+      <div>
+        <td class="contactInfo">
+          <p><%= name %></p>
+          
+          <p>
+            <i class="fa-solid fa-phone fa-xl socialMedia"></i>
+            <%= phone %>
+          </p>
+          
+          <p>
+            <i class="fa-solid fa-envelope fa-xl socialMedia"></i>
+            <%= email %>
+          </p>
+          
+          <p>
+              <a class="contactInfo" href="<%= linkedin %>" target="_blank"><i class="fa-brands fa-github fa-xl socialMedia"></i></a>
+              <a class="contactInfo" href="<%= github %>" target="_blank"><i class="fa-brands fa-linkedin fa-xl socialMedia"></i></a>
+          </p>
+        </td>
+      </div>
+      <form action="/contact/add" method="post" id="contactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name..">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Your email..">
+
+        <label for="number">Number</label>
+        <input type="number" id="number" name="number" placeholder="Your contact number..">
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+
+    <!-- Footer of the page -->
+    <%- include('partials/footer.ejs') %>
+  </body>
+
+</html>
